@@ -47,7 +47,6 @@
   services.displayManager.defaultSession = "xfce";
   services.xserver.displayManager.startx.enable = true;
   services.xserver.windowManager.openbox.enable = true;  
-  services.desktopManager.gnome.enable = false;
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
