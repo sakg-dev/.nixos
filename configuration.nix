@@ -36,12 +36,18 @@
   # };
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
-  services.xserver.autorun = false;
+  services.xserver = {
+    enable = true;
+    autorun = false;
+    desktopManager = {
+	xterm.enable = false;
+	xfce.enable = true;
+    };
+  };
+  services.displayManager.defaultSession = "xfce";
   services.xserver.displayManager.startx.enable = true;
   services.xserver.windowManager.openbox.enable = true;  
   services.desktopManager.gnome.enable = false;
-  services.xserver.desktopManager.xterm.enable = false;
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
