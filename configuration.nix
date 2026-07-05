@@ -35,6 +35,8 @@
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
 
+  nixpkgs.config.allowUnfree = true;
+
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
@@ -44,9 +46,15 @@
 	xfce.enable = true;
     };
   };
+  services.xserver.excludePackages = [ pkgs.xterm ];
   services.displayManager.defaultSession = "xfce";
   services.xserver.displayManager.startx.enable = true;
   services.xserver.windowManager.openbox.enable = true;  
+
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = false;
+  };
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
@@ -66,13 +74,13 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
-  users.users.alice = {
+  users.users.sakg = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
     packages = with pkgs; [
       tree
+      google-chrome
     ];
-    name = "sakg";
     password = "sakgdev";
   };
 
@@ -84,6 +92,7 @@
     vim
     wget
     git
+    w3m
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
