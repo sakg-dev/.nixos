@@ -21,7 +21,7 @@
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = "Asia/India";
+  time.timeZone = "Asia/Kolkata";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -80,8 +80,9 @@
     packages = with pkgs; [
       tree
       google-chrome
-    ];
-    password = "sakgdev";
+      obs-studio
+      diodon
+    ]; 
   };
 
   programs.firefox.enable = true;
