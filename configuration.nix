@@ -82,8 +82,16 @@
       google-chrome
       obs-studio
       diodon
+      nodejs
+      xclip
+      freshfetch
     ]; 
   };
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.open-dyslexic
+  ];
+
 
   programs.firefox.enable = true;
 
@@ -94,6 +102,8 @@
     wget
     git
     w3m
+    zellij
+    neovim
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
