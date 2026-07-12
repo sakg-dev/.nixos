@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+<menu id="apps-term-menu" label="Terminals">
+  <item label="Xfce Terminal">
+    <action name="Execute">
+      <command>xfce4-terminal</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
+<menu id="apps-net-menu" label="Internet">
+  <item label="Chrome">
+    <action name="Execute">
+      <command>google-chrome</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>Chrome</wmclass>
+      </startupnotify>
+    </action>
+  </item>>
+</menu>
+
+<menu id="apps-media-menu" label="Media">
+  <item label="OBS Studio">
+    <action name="Execute">
+      <command>obs</command>
+    </action>
+  </item>
+</menu>
+
+<menu id="root-menu" label="Openbox 3">
+  <menu id="apps-net-menu"/>
+  <menu id="apps-media-menu"/>
+  <menu id="apps-term-menu"/>
+  <item label="Exit">
+    <action name="Exit">
+      <prompt>yes</prompt>
+    </action>
+  </item>
+</menu>
+
+</openbox_menu>

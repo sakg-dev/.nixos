@@ -6,6 +6,7 @@
   imports =
     [
       ./hardware-configuration.nix
+      <home-manager/nixos>
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -78,13 +79,9 @@
     isNormalUser = true;
     extraGroups = [ "wheel" ];
     packages = with pkgs; [
-      tree
       google-chrome
       obs-studio
       diodon
-      nodejs
-      xclip
-      freshfetch
     ]; 
   };
 
@@ -98,13 +95,18 @@
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
+    tree
     vim
     wget
     git
     w3m
     zellij
     neovim
+    home-manager
     python3
+    nodejs
+    xclip
+    freshfetch
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

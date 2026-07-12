@@ -1,0 +1,41 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<channel name="xfce4-terminal" version="1.0">
+  <property name="font-name" type="string" value="OpenDyslexicM Nerd Font Bold Italic 7"/>
+  <property name="font-allow-bold" type="bool" value="true"/>
+  <property name="background-mode" type="string" value="TERMINAL_BACKGROUND_IMAGE"/>
+  <property name="background-darkness" type="double" value="0.46000000000000002"/>
+  <property name="background-image-file" type="string" value="/etc/nixos/wallpaper/terminal.jpg"/>
+  <property name="background-image-shading" type="double" value="0.67000000000000004"/>
+  <property name="background-image-style" type="string" value="TERMINAL_BACKGROUND_STYLE_STRETCHED"/>
+  <property name="misc-cursor-blinks" type="bool" value="true"/>
+  <property name="misc-copy-on-select" type="bool" value="true"/>
+  <property name="misc-maximize-default" type="bool" value="true"/>
+  <property name="misc-middle-click-opens-uri" type="bool" value="true"/>
+  <property name="color-foreground" type="string" value="#dcdcdc"/>
+  <property name="color-palette" type="string" value="#3f3f3f;#705050;#60b48a;#dfaf8f;#9ab8d7;#dc8cc3;#8cd0d3;#dcdcdc;#709080;#dca3a3;#72d5a3;#f0dfaf;#94bff3;#ec93d3;#93e0e3;#ffffff"/>
+  <property name="color-background" type="string" value="#2c2c2c"/>
+  <property name="color-background-vary" type="bool" value="false"/>
+  <property name="color-cursor-foreground" type="string" value=""/>
+  <property name="color-cursor" type="string" value="#dcdcdc"/>
+  <property name="color-cursor-use-default" type="bool" value="true"/>
+  <property name="color-selection" type="string" value="#91914141acac"/>
+  <property name="color-selection-background" type="string" value=""/>
+  <property name="color-selection-use-default" type="bool" value="false"/>
+  <property name="color-bold" type="string" value=""/>
+  <property name="color-bold-use-default" type="bool" value="false"/>
+  <property name="color-bold-is-bright" type="bool" value="true"/>
+  <property name="color-use-theme" type="bool" value="false"/>
+  <property name="tab-activity-color" type="string" value="#aa0000"/>
+  <property name="misc-menubar-default" type="bool" value="false"/>
+  <property name="misc-toolbar-default" type="bool" value="false"/>
+  <property name="misc-borders-default" type="bool" value="true"/>
+  <property name="tab-activity-timeout" type="uint" value="0"/>
+  <property name="shortcuts-no-mnemonics" type="bool" value="false"/>
+  <property name="misc-show-unsafe-paste-dialog" type="bool" value="false"/>
+  <property name="misc-confirm-close" type="bool" value="false"/>
+  <property name="scrolling-bar" type="string" value="TERMINAL_SCROLLBAR_RIGHT"/>
+  <property name="scrolling-lines" type="uint" value="1000"/>
+  <property name="overlay-scrolling" type="bool" value="false"/>
+  <property name="font-use-system" type="bool" value="true"/>
+</channel>
