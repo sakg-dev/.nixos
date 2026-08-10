@@ -6,7 +6,6 @@
   imports =
     [
       ./hardware-configuration.nix
-      <home-manager/nixos>
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -82,6 +81,10 @@
       google-chrome
       obs-studio
       diodon
+      krita
+      blender
+      godot
+      authenticator
     ]; 
   };
 
@@ -102,11 +105,13 @@
     w3m
     zellij
     neovim
-    home-manager
     python3
     nodejs
     xclip
     freshfetch
+    gitui
+    rustup
+    gcc
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
