@@ -85,8 +85,13 @@
       blender
       godot
       authenticator
+      appimage-run
+      kicad
     ]; 
   };
+
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "sakg" ];
 
   fonts.packages = with pkgs; [
     nerd-fonts.open-dyslexic
@@ -114,6 +119,14 @@
     gitui
     rustup
     gcc
+    unzip
+    freecad
+    ffmpeg
+    mpv
+    fzf
+    nasm
+    gnumake
+    qemu
   ];
 
   environment.variables.EDITOR = "vim";
