@@ -7,6 +7,8 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.hlsearch = false
+vim.opt.list = true
+vim.opt.lcs = vim.opt.lcs + "space:."
 
 vim.cmd [[
   highlight Normal guibg=none

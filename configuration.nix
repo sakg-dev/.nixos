@@ -48,7 +48,13 @@
   };
   services.xserver.excludePackages = [ pkgs.xterm ];
   services.displayManager.defaultSession = "xfce";
-  services.xserver.displayManager.startx.enable = true;
+  services.xserver.displayManager.startx = {
+	enable = true;
+	generateScript = true;
+	extraCommands = ''
+		openbox
+	'';
+  };
   services.xserver.windowManager.openbox.enable = true;  
 
   hardware.bluetooth = {
@@ -100,7 +106,7 @@
 
   # programs.firefox.enable = false;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [ "nix-command" ];
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
@@ -113,6 +119,7 @@
     zellij
     neovim
     python3
+    python313Packages.pip
     nodejs
     xclip
     freshfetch
@@ -127,6 +134,10 @@
     nasm
     gnumake
     qemu
+    cmake
+    pkg-config
+    htop
+    stdenv
   ];
 
   environment.variables.EDITOR = "vim";
